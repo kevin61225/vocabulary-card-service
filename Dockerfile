@@ -37,9 +37,9 @@ USER appuser
 # Expose port
 EXPOSE 8080
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:8080/health || exit 1
+# Health check (commented out until health endpoint is implemented)
+# HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+#   CMD curl -f http://localhost:8080/health || exit 1
 
 # Set environment variables
 ENV ASPNETCORE_URLS=http://+:8080
